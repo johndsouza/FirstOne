@@ -1,16 +1,12 @@
 {
-  "name": "hellow",
+  "name": "firstone",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Hello World npm project with a test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo Build completed",
-    "start": "node index.js"
-
+    "start": "node index.js",
+    "test": "node test.js"
   },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "license": "ISC"
 }

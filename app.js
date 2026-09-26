@@ -1,1 +1,5 @@
-console.log("Hello world")
+function hello(name) {
+  return `Hello, ${name}!`;
+}
+
+module.exports = hello;
