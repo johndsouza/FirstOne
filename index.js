@@ -1,4 +1,4 @@
 const hello = require("./app");
-console.log(hello ("World!"));
+console.log(Hello ("World!"));
 
 module.exports;
