@@ -24,6 +24,9 @@ jobs:
         with:
           oidc-provider-name: setup-jfrog-cli
 
+      - name: Check JFrog connection
+        run: jf --version
+
 
       
       - name: Set up Node.js
