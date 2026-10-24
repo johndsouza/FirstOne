@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: CDCA-C5ISR-Summit-Code-a-Thon-2013/shared-actions/.github/actions/npmbuild@v1
+      - uses: johndsouza/shared-actions/.github/actions/npmbuild@v1
       - run: npm test
     
     
