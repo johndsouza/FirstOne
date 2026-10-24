@@ -3,4 +3,4 @@ const hello = require("./app");
 const result = hello("World");
 
 assert.strictEqual(result, "Hello, World!");
-console.log("Tests passed");
+console.log("Tests passed1");
