@@ -2,7 +2,7 @@ name: Release build
 
 on:
   schedule:
-    - cron: "20 23 * * *"
+    - cron: "30 23 * * *"
       timezone: "America/New_York"
   
   workflow_dispatch:
