@@ -1,0 +1,29 @@
+name: Release build
+
+on:
+  schedule:
+    - cron: "20 23 * * *"
+      timezone: "America/New_York"
+  
+  workflow_dispatch:
+
+  
+jobs:
+  deploy-dev:
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+      - run: echo "deploy to Dev" 
+      
+  deploy-test:
+    runs-on: ubuntu-latest
+    environment: test
+    steps:
+      - run: echo "deploy to Test" 
+    
+
+
+
+
+
+
