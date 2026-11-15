@@ -17,6 +17,14 @@ jobs:
       - uses: actions/checkout@v4
       - uses: johndsouza/shared-actions/.github/actions/npmbuild@v1
       - run: npm test
+
+    
+      - uses: actions/download-artifact@v8
+        with:
+        name: my-artifact
+
+      - name: Display structure of downloaded files
+        run: ls -R
     
     
 
