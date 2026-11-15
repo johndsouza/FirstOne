@@ -19,13 +19,23 @@ jobs:
       - run: npm test
 
     
+      - name: Upload test 
+        uses: actions/Upload-artifact@v8
+        with:
+          name: my-artifact
+          path: jack.js
+
+      - uses: actions/download-artifact@v8
+        with:
+          name: my-artifact
+
+      - name: Display structure of downloaded files
+        run: ls -R
+
       - name: Download math result for job 2
         uses: actions/download-artifact@v5
         with:
           name: homework_final
-
-      - name: Display structure of downloaded files
-        run: ls -R
     
     
 
