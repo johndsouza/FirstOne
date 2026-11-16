@@ -7,6 +7,10 @@ on:
   
   workflow_dispatch:
 
+permissions:
+  actions: read
+  contents: read
+  
   
 jobs:
   deploy-dev:
@@ -20,7 +24,7 @@ jobs:
         with:
           name: my-artifact
           run-id: ${{ github.event.workflow_run.id }}
-          path: ${{ runner.temp }}\my-artifact
+          path: ${{ runner.temp }}/my-artifact
       
   deploy-test:
     needs: deploy-dev
