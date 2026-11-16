@@ -24,7 +24,7 @@ jobs:
         uses: actions/download-artifact@v7
         with:
           artifact-ids: "14197924927"
-          run-id: ${{ github.event.workflow_run.id }}
+          run-id: "43807498734"
           github-token: ${{ github.token }}
           repository: johndsouza/FirstOne
           path: ${{ runner.temp }}/my-artifact
