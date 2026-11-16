@@ -1,9 +1,9 @@
 name: Release build
 
 on:
-  schedule:
-    - cron: "30 23 * * *"
-      timezone: "America/New_York"
+  workflow_run:
+    workflows: ["Node.js CI"]
+    types: [completed]
   
   workflow_dispatch:
 
@@ -16,6 +16,7 @@ jobs:
       - run: echo "deploy to Dev" 
       
   deploy-test:
+    needs: deploy-dev
     runs-on: ubuntu-latest
     environment: test
     steps:

@@ -32,10 +32,6 @@ jobs:
       - name: Display structure of downloaded files
         run: ls -R
 
-      - name: Download math result for job 2
-        uses: actions/download-artifact@v5
-        with:
-          name: homework_final
     
     
 
