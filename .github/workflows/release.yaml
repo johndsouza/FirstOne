@@ -20,11 +20,22 @@ jobs:
     steps:
       - run: echo "deploy to Dev" 
       
-      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 #v7.0
+      - name: Download artifact
+        uses: actions/download-artifact@v8
         with:
-          name: my-artifact
+          artifact-ids: "14198950925"
           run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+          repository: johndsouza/FirstOne
           path: ${{ runner.temp }}/my-artifact
+
+
+
+      #- uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 #v7.0
+       # with:
+       #   name: my-artifact
+        #  run-id: ${{ github.event.workflow_run.id }}
+        #  path: ${{ runner.temp }}/my-artifact
       
   deploy-test:
     needs: deploy-dev
