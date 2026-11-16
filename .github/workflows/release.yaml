@@ -16,7 +16,7 @@ jobs:
     steps:
       - run: echo "deploy to Dev" 
       
-      - uses: actions/download-artifact@v8
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 #v7.0
         with:
           name: my-artifact
       
