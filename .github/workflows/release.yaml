@@ -16,6 +16,10 @@ jobs:
     steps:
       - run: echo "deploy to Dev" 
       
+      - uses: actions/download-artifact@v8
+        with:
+          name: my-artifact
+      
   deploy-test:
     needs: deploy-dev
     runs-on: ubuntu-latest
