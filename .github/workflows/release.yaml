@@ -20,6 +20,7 @@ jobs:
         with:
           name: my-artifact
           run-id: ${{ github.event.workflow_run.id }}
+          path: ${{ runner.temp }}\my-artifact
       
   deploy-test:
     needs: deploy-dev
