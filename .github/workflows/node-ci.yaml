@@ -25,12 +25,12 @@ jobs:
           name: my-artifact
           path: jack.js
 
-      - uses: actions/download-artifact@v8
-        with:
-          name: my-artifact
+      # - uses: actions/download-artifact@v8
+      #   with:
+      #     name: my-artifact
 
-      - name: Display structure of downloaded files
-        run: ls -R
+      # - name: Display structure of downloaded files
+      #   run: ls -R
 
     
     
