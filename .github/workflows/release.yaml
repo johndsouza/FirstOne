@@ -1,21 +1,23 @@
 name: Release build
 
 on:
-  schedule:
-    - cron: "* * * * *"
-      timezone: "America/New_York"
+  workflow_run:
+    workflows: ["Node.js CI"]
+    types: [completed]
   
   workflow_dispatch:
 
   
 jobs:
   deploy-dev:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     environment: dev
     steps:
       - run: echo "deploy to Dev" 
       
   deploy-test:
+    needs: deploy-dev
     runs-on: ubuntu-latest
     environment: test
     steps:
