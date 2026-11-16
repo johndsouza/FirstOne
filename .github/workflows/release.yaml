@@ -21,7 +21,7 @@ jobs:
       - run: echo "deploy to Dev" 
       
       - name: Download artifact
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v7
         with:
           artifact-ids: "14197924927"
           run-id: ${{ github.event.workflow_run.id }}
