@@ -9,7 +9,7 @@ on:
       - npmtest
   workflow_dispatch:
 
-  emv:
+  env:
    APPSCANID: 'OT3_CI'
 
 jobs:
